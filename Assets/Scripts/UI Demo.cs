@@ -28,4 +28,12 @@ public class NewMonoBehaviourScript : MonoBehaviour
     {
         sr.color = Random.ColorHSV();
     }
+
+    public void SetScale(float scale)
+    {
+
+        transform.localScale = Vector3.one * scale;
+        //scale is set in the buttons inspector
+
+    }
 }
