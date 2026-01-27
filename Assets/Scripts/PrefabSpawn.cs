@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PrefabSpawn : MonoBehaviour
 
@@ -16,7 +17,7 @@ public class PrefabSpawn : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        mousepos = Camera.main.ScreenToWorldPoint(mousepos.current.position.ReadValue());
+        mousepos = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
     }
 
     public void Spawn ()
