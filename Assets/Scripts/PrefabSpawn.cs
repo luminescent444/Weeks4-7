@@ -23,7 +23,7 @@ public class PrefabSpawn : MonoBehaviour
     public void Spawn ()
     {
 
-        Instantiate(pre,mousepos);
+        //Instantiate(pre,mousepos);
 
     }
 }
