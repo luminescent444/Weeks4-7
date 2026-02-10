@@ -398,11 +398,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7892137460375537043, guid: 300a70a472fd0274498c4d2689f1a74e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.96
+      value: -4.8
       objectReference: {fileID: 0}
     - target: {fileID: 7892137460375537043, guid: 300a70a472fd0274498c4d2689f1a74e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.7
+      value: 3.58
       objectReference: {fileID: 0}
     - target: {fileID: 7892137460375537043, guid: 300a70a472fd0274498c4d2689f1a74e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -464,6 +464,7 @@ MonoBehaviour:
   speed: 0.1
   rotationSpeed: 0.1
   position: {x: 0, y: 0, z: 0}
+  dist: 0
 --- !u!1 &684481010
 GameObject:
   m_ObjectHideFlags: 0
