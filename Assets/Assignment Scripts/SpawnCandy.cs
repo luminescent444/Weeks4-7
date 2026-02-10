@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class SpawnCandy : MonoBehaviour
 {
-    
+    public GameObject candy;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -15,4 +15,10 @@ public class SpawnCandy : MonoBehaviour
     {
         
     }
+
+    public void Spawn()
+    {
+        Instantiate(candy);
+    }
+
 }

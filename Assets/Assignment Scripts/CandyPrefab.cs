@@ -3,10 +3,14 @@ using UnityEngine.UIElements;
 
 public class CandyPrefab : MonoBehaviour
 {
-    public float speed = 0.1f;
-    public float rotationSpeed = 0.1f;
+    float speed = 2f;
+    public float rotationSpeed = 1f;
     public Vector3 position;
+
+    //for collsiions
     public float dist;
+    public Transform player;
+    public float score;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -21,10 +25,10 @@ public class CandyPrefab : MonoBehaviour
         position = transform.position;
 
         //add speed to transform
-        position.y -= speed;
+        position.y -= speed * Time.deltaTime;
 
         //do rotation
-        position.z += rotationSpeed;
+        //position.z += rotationSpeed;
 
         //correct the object position
         transform.position = position;
@@ -33,10 +37,17 @@ public class CandyPrefab : MonoBehaviour
         {
             Object.Destroy(gameObject);
         }
+
+        CollisionCheck();
     }
 
-    public void CollisionCheck ()
+    public void CollisionCheck()
     {
-        
+        dist = Vector2.Distance(transform.position, player.position);
+        if (dist < 1)
+        {
+            Destroy(gameObject);
+            score += 1;
+        }
     }
 }

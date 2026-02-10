@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7892137460375537043}
   - component: {fileID: 3473732682056630640}
+  - component: {fileID: -1504287734663976274}
   m_Layer: 0
   m_Name: Candy Prefab
   m_TagString: Untagged
@@ -87,3 +88,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &-1504287734663976274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2942410897511219001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edcb110e0ab4a5b48ae92bb45de92776, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 1
+  position: {x: 0, y: 0, z: 0}
+  dist: 0
+  player: {fileID: 0}
+  score: 0

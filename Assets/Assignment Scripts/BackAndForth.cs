@@ -8,7 +8,7 @@ public class BackAndForth : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        speed = 0.02f;
+        speed = 0.5f;
     }
 
     // Update is called once per frame
@@ -25,7 +25,7 @@ public class BackAndForth : MonoBehaviour
 
 
         //add speed to transform
-        position.x += speed;
+        position.x += speed * Time.deltaTime;
 
         //correct the object position
         transform.position = position;
