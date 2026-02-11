@@ -3,9 +3,10 @@ using UnityEngine.UIElements;
 
 public class CandyPrefab : MonoBehaviour
 {
-    float speed = 2f;
-    public float rotationSpeed = 1f;
+    float speed = 3f;
+    public float rotationSpeed = 10f;
     public Vector3 position;
+    public Vector3 rotation;
 
     //for collsiions
     public float dist;
@@ -28,7 +29,9 @@ public class CandyPrefab : MonoBehaviour
         position.y -= speed * Time.deltaTime;
 
         //do rotation
-        //position.z += rotationSpeed;
+        rotation = transform.eulerAngles;
+        rotation.z += rotationSpeed; 
+        transform.eulerAngles = rotation;
 
         //correct the object position
         transform.position = position;
