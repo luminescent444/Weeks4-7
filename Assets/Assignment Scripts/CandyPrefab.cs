@@ -12,11 +12,11 @@ public class CandyPrefab : MonoBehaviour
     public float dist;
     public Transform player;
     public float score;
-    
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
