@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SocialPlatforms.Impl;
 using UnityEngine.UI;
@@ -13,6 +14,7 @@ public class CandySlider : MonoBehaviour
     public Vector3 spawnPos;
     public float dist;
     public float score;
+    public TextMeshProUGUI scoreText;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -25,6 +27,7 @@ public class CandySlider : MonoBehaviour
     {
         //pre = GetComponent<>
         CollisionCheck();
+        scoreText.text = "Score: " + score;
     }
 
     public void SetLocation(float sliderValue)
