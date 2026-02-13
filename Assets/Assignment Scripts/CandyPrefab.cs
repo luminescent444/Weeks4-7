@@ -10,7 +10,7 @@ public class CandyPrefab : MonoBehaviour
 
     //for collsiions
     public float dist;
-    public Transform player;
+    public GameObject player;
     public float score;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -46,11 +46,11 @@ public class CandyPrefab : MonoBehaviour
 
     public void CollisionCheck()
     {
-        dist = Vector2.Distance(transform.position, player.position);
-        if (dist < 1)
-        {
-            Destroy(gameObject);
-            score += 1;
-        }
+        //dist = Vector2.Distance(transform.position, player.position);
+        //if (dist < 1)
+        //{
+        //    Destroy(gameObject);
+        //    score += 1;
+        //}
     }
 }
