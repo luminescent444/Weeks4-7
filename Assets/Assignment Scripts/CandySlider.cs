@@ -15,6 +15,10 @@ public class CandySlider : MonoBehaviour
     public float dist;
     public float score;
     public TextMeshProUGUI scoreText;
+    public float timerCount;
+    public float timerTotal = 3;
+    public bool bubbleInstantiated = false;
+    public GameObject speechBubble;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -25,9 +29,9 @@ public class CandySlider : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //pre = GetComponent<>
         CollisionCheck();
         scoreText.text = "Score: " + score;
+
     }
 
     public void SetLocation(float sliderValue)
