@@ -2,29 +2,32 @@ using UnityEngine;
 
 public class BackAndForth : MonoBehaviour
 {
+    //creating variables
+
+    //variables for the speed and position of the person
     public float speed;
     public Vector3 position;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        //set the speed to its default value
         speed = 0.5f;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        //get object position
+        //get the person's position
         position = transform.position;
 
-
+        //if its outside the bounds of the screen
         if (position.x < -7.5 || position.x > 7.5)
         {
+            //switch the speed to go the opposite direction
             speed = speed * -1;
         }
 
 
-        //add speed to transform
+        //add the speed to the transform
         position.x += speed * Time.deltaTime;
 
         //correct the object position

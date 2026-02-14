@@ -760,17 +760,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slider: {fileID: 2125792461}
   position: {x: 0, y: 0, z: 0}
-  candy: {fileID: 2942410897511219001, guid: 300a70a472fd0274498c4d2689f1a74e, type: 3}
+  candyPrefab: {fileID: 2942410897511219001, guid: 300a70a472fd0274498c4d2689f1a74e, type: 3}
   person: {fileID: 1761663301}
-  pre: {fileID: 0}
+  currentPrefab: {fileID: 0}
   spawnPos: {x: 0, y: 0, z: 0}
   dist: 0
   score: 0
   scoreText: {fileID: 572777824}
-  timerCount: 0
-  timerTotal: 3
-  bubbleInstantiated: 0
-  speechBubble: {fileID: 1318651622650737213, guid: 54dbd21872b0c0b4b85dabc0e1bf9976, type: 3}
 --- !u!1 &767595272
 GameObject:
   m_ObjectHideFlags: 0
@@ -1027,10 +1023,10 @@ MonoBehaviour:
   timerTotal: 3
   bubbleInstantiated: 0
   speechBubble: {fileID: 1318651622650737213, guid: 54dbd21872b0c0b4b85dabc0e1bf9976, type: 3}
-  speechBubblePrefab: {fileID: 0}
+  currentSpeechBubblePrefab: {fileID: 0}
+  bubbleSpawn: {x: 0, y: 0, z: 0}
   person: {fileID: 0}
   personObj: {fileID: 1761663299}
-  bubbleSpawn: {x: 0, y: 0, z: 0}
 --- !u!4 &1333283651
 Transform:
   m_ObjectHideFlags: 0

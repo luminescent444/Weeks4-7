@@ -3,32 +3,30 @@ using UnityEngine.UIElements;
 
 public class CandyPrefab : MonoBehaviour
 {
+    //creating variables
+
+    //variables for moving the candy
     float speed = 3f;
-    public float rotationSpeed = 10f;
     public Vector3 position;
+
+    //variables for spinning the candy
+    public float rotationSpeed = 10f;
     public Vector3 rotation;
 
-    //for collsiions
-    public float dist;
-    public GameObject player;
-    public float score;
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
 
     }
 
-    // Update is called once per frame
     void Update()
     {
         //get object position
         position = transform.position;
 
-        //add speed to transform
+        //add speed to object's transform
         position.y -= speed * Time.deltaTime;
 
-        //do rotation
+        //rotate the candy
         rotation = transform.eulerAngles;
         rotation.z += rotationSpeed; 
         transform.eulerAngles = rotation;
@@ -36,21 +34,11 @@ public class CandyPrefab : MonoBehaviour
         //correct the object position
         transform.position = position;
 
+        //if the candy falls below the bottom of the screen
         if (position.y < -6)
         {
+            //destroy the instance
             Object.Destroy(gameObject);
         }
-
-        CollisionCheck();
-    }
-
-    public void CollisionCheck()
-    {
-        //dist = Vector2.Distance(transform.position, player.position);
-        //if (dist < 1)
-        //{
-        //    Destroy(gameObject);
-        //    score += 1;
-        //}
     }
 }
